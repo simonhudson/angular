@@ -1,0 +1,39 @@
+<div class="col-xs-12">
+    <div class="page-header">
+        <h1>Credit Cards</h1>
+    </div>
+    <p class="alert alert-danger" role="alert" ng-show="error">{{ error }}</p>
+</div>
+<div class="col-xs-12 text-right" ng-show="cards">
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="repo-sort-order">Order</label>
+            <select class="form-control" id="list-sort-order">
+                <option value="+cardTitle">Card name (A-Z)</option>
+                <option value="-cardTitle">Card name (Z-A)</option>
+                <option value="+cardApr">APR (low-high)</option>
+                <option value="-cardApr">APR (high-low)</option>
+            </select>
+            <input class="btn btn-primary" ng-click="doSort()" type="submit" value="Sort" />
+        </div>
+    </form>
+</div>
+
+<div class="col-xs-12" ng-show="cards">
+    <table class="compare table table-striped" ng-if="cards">
+        <thead>
+            <tr>
+                <th id="card__title">Card</th>
+                <th id="card__description">Description</th>
+                <th id="card__apr">APR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="card in cards | orderBy:listSortOrder">
+                <td headers="card__title"><a href="#/credit-card/{{ card.id }}">{{ card.cardTitle }}</a></td>
+                <td headers="card__description">{{ card.cardDescription }}</td>
+                <td headers="card__apr">{{ card.cardApr }}%</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

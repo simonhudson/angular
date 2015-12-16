@@ -1,0 +1,28 @@
+{
+    "data" : [
+        {
+          "id": 1,
+          "cardTitle" : "Virgin 40 Month Balance Transfer Card",
+          "cardDescription" : "Card Description. No Annual Fee.",
+          "cardApr" : 18.4
+        },
+        {
+          "id": 2,
+          "cardTitle" : "Post Office Money Matched Credit Card",
+          "cardDescription" : "Low interest on purchases",
+          "cardApr" : 18.9
+        },
+        {
+          "id": 3,
+          "cardTitle" : "Virgin Money Virgin Balance Transfer Credit Card (40 Months)",
+          "cardDescription" : "Save up to £145 by transferring your balance",
+          "cardApr" : 18.7
+        },
+        {
+          "id": 4,
+          "cardTitle" : "Barclaycard Platinum With Balance Transfer (37 Months)",
+          "cardDescription" : "Save up to £137 by transferring your balance",
+          "cardApr" : 18.2
+        }
+    ]
+}
